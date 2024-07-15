@@ -39,7 +39,7 @@ class TestStudent(Node):
 	def timer_callback(self):
 	
 		ready_msg = Int32()
-		ready_msg.data = example_group_number
+		ready_msg.data = group_number
 		self.ready_publisher.publish(ready_msg)
 	
 		# If start has not been received
@@ -73,8 +73,6 @@ class TestStudent(Node):
 	 
 		
 def main():
-	# No arguments handled any more
-	
 	# Initiate serial
 	ser = serial.Serial(
 			port='/dev/ttyUSB0', # USB number could change depending on what port the USB is plugged into. DOUBLE CHECK THIS
