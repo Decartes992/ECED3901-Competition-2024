@@ -13,7 +13,7 @@ from rclpy.node import Node
 from std_msgs.msg import Empty, Int32
 from geometry_msgs.msg import Pose, Twist
 
-example_group_number = 0
+group_number = 8
 
 # Class to act as a team's robot
 class TestStudent(Node):
@@ -83,8 +83,8 @@ def main():
 	team_number = chr(ser.read()[-1])
 	
 	# Swap example group number with your group number (and remove the IF statement) when ready
-	global example_group_number
-	example_group_number = 11 if team_number == '1' else 15 
+	global group_number
+	group_number = 8 #if team_number == '1' else 15 
 			
 	# Init ros2
 	rclpy.init()
